@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% set pageID = "page-search-results" %}
+
+m{% block styles %}
+<link rel="stylesheet" href="./css/search-results.css">
+{% endblock styles %}
+
+{% block title %}
+<title>Resultado da Pesquisa</title>
+{% endblock title %}
+
+{% block content %}
+<header>
+    <img src="./assets/logo.svg" alt="logomarca">
+    <a href="/">
+        <span></span>
+        Voltar para Home
+    </a>
+</header>
+
+<main>
+
+    {% if places.length != 0 %}
+    <h4>
+        <strong>
+            {{places.length}}
+            pontos
+        </strong>
+        encontrados
+    </h4>
+
+    <div class="cards">
+        {% for place in places %}
+        <div class="card">
+            <img src="{{place.image}}" alt="Colectoria">
+            <h1>{{place.name}}</h1>
+            <h3>{{place.items}}</h3>
+            <p>
+                {{place.city}},
+                {{place.state}}
+                <br>
+                {{place.address}}
+                <br>
+                {{place.address2}}, CEP: {{place.cep}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <h4>Nenhum registro encontrado</h4>
+    {% endif %}
+
+</main>
+{% endblock content %}
+
+<section id="></section>
+
+</body>
+
+</html>

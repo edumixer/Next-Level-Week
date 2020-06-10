@@ -1,0 +1,151 @@
+@media (max-width: 900px){
+    #page-home{
+        background-position-x: 70vw;
+    }
+
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+    
+    #page-home header a{
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page-home main{
+        align-items: center;
+    }
+
+    #page-home main h1{
+        font-size: 32px;
+    }
+
+    #page-home main p{
+        font-size: 22px;
+    }
+
+    #page-create-point header{
+        justify-content: center;
+    }
+
+    #page-create-point header img{
+        display: none;
+    }
+
+    #page-create-point header a{
+        font-size: 18px;
+    }
+
+    #page-search-results .cards{
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results header img{
+        display: none;
+    }
+
+    #page-search-results header{
+        justify-content: center;
+    }
+
+    #page-search-results header a{
+        font-size: 18px;
+    }
+
+    body::after{
+        display: none;
+    }
+}
+
+@media (min-width: 1700){           /* altura minima da tela */
+    #page-home{
+        background-position-x: 40vw;
+    }
+}
+
+@media (max-width: 810px){          /* altura maxima da tela */
+    form .field-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form .field-group .field + .field{
+        margin-left: 0px;
+    }
+
+    .items-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+
+    form h1{
+        font-size: 24px;
+    }
+
+    form input,
+    form select{
+        padding: 16px 12px;
+    }
+
+    form button{
+        width: 80%;
+    }
+
+    form legend h2{
+        flex-direction: column;
+    }
+}
+
+@media (max-height: 760){
+    #page-home{
+        background-position-y: 200px;
+    }
+
+
+    #page-home header a{
+        bottom: 0px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+@media (max-width: 450px){
+    #page-home header a{
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+    }
+
+    form{
+        text-align: center;
+    }
+
+    .items-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 350px){
+    #create-point-page form{
+        text-align: center; 
+    }
+
+    #create-point-page form fieldset legend h2{
+        font-size: 16px;
+    }
+
+    #create-point-page form input,
+    #create-point-page form select{
+        padding-top: 16px;
+    }
+}
